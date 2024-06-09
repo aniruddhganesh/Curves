@@ -1,0 +1,41 @@
+For Quadratic Curve:
+
+t != 0 -> Db0
+C_quad(t): 
+        for i is += 1/t !and 1:
+                G_1 = lerp(P_0, P_1, i)
+                G_2 = lerp(P_1, P_2, i)
+
+                B_i = lerp(G_1, G_2, i)
+
+C_cubic(t):
+        for i is += 1/t !and 1:
+                G_1 = lerp(P_0, P_1, i)
+                G_2 = lerp(P_1, P_2, i)
+                G_3 = lerp(P_2, P_3, i)
+
+                H_1 = lerp(G_1, G_2, i)
+                H_2 = lerp(G_2, G_3, i)
+
+                B_i = lerp(H_1, H_2, i)
+
+C_quart(t):
+        for i is += 1/t !and 1:
+                G_1 = lerp(P_0, P_1, i)
+                G_2 = lerp(P_1, P_2, i)
+                G_3 = lerp(P_2, P_3, i)
+                G_4 = lerp(P_3, P_4, i)
+
+                H_1 = lerp(G_1, G_2, i)
+                H_2 = lerp(G_2, G_3, i)
+                H_3 = lerp(G_3, G_4, i)
+
+                I_1 = lerp(H_1, H_2, i)
+                I_2 = lerp(H_2, H_3, i)
+                
+                B_i = lerp(I_1, I_2, i)
+
+C_n(t, n):
+        for x is += 1/t !and 1:        
+                for i in rng(n-1):
+                        
