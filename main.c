@@ -47,9 +47,8 @@ static Vec2 bezier_ctrl_pts[CTRL_PTS] = {
 Vec2 vec2lerp(Vec2 p_i, Vec2 p_f, float t)
 {
         return (Vec2) {
-                
-                (1 - t) * p_i.x + t * p_f.x,
-                (1 - t) * p_i.y + t * p_f.y,
+                p_i.x + (p_f.x - p_i.x) * t,
+                p_i.y + (p_f.y - p_i.y) * t,
         };
 }
 
